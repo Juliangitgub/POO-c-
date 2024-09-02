@@ -28,8 +28,11 @@ int main() {
   double estatura = stod(leer("Estatura: "));
   int peso = stoi(leer("Peso: "));
 
-  Persona Identidades =Persona(nombre, apellido, numeroid, dia, mes, año, estatura, peso);
-  
-
+  Persona identidades =Persona(nombre, apellido, numeroid, dia, mes, año, estatura, peso);
+  int diaHoy = stoi(leer("Dia de hoy: "));
+  int mesHoy= stoi(leer("Mes de hoy: "));
+  int añoHoy= stoi(leer("Año de hoy: "));
+  identidades.edad(diaHoy, mesHoy, añoHoy);
+  identidades.imc();
   return 0;
 }
