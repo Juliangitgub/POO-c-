@@ -1,6 +1,6 @@
+#include "Persona.h"
 #include <iostream>
 #include <string>
-#include "Persona.h"
 using namespace std;
 // siempre con mayuscula inicial las clases::Clase
 /*
@@ -8,10 +8,28 @@ Clase-> objetos-> atributos-> metodos
 
 */
 
+string leer(string mensaje) {
+  string aux;
+  cout << mensaje << endl;
+  getline(cin, aux);
+  return aux;
+}
+
 int main() {
 
-Persona Juan= Persona("Juan","Perez",123,11,5,2003,1.75,90);
- Juan.edad(2,9,2024);
- 
+  cout << "Hola, bienvenido a nuestra sede comunal" << endl;
+  cout << "\nPara verificar necesitamos los siguientes datos: \n" << endl;
+  string nombre = leer("\nnombre: ");
+  string apellido = leer("\napellido: ");
+  int numeroid = stoi(leer("\nnumero de identificacion: "));
+  int dia = stoi(leer("Dia de nacimiento: "));
+  int mes = stoi(leer("Mes de nacimiento"));
+  int año = stoi(leer("Año de nacimiento: "));
+  double estatura = stod(leer("Estatura: "));
+  int peso = stoi(leer("Peso: "));
+
+  Persona Identidades =Persona(nombre, apellido, numeroid, dia, mes, año, estatura, peso);
+  
+
   return 0;
 }

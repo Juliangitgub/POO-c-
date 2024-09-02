@@ -13,6 +13,7 @@ Persona::Persona(string nombre, string apellido, int numeroid, int dia, int mes,
   this->año = año;
   this->estatura = estatura;
   this->peso = peso;
+  cout<<"Se creo un usuario con exito"<<endl;
 }
 void Persona::imc() {
   cout << "su IMC es: " << peso / (estatura * estatura) << endl;
