@@ -14,8 +14,11 @@ private:
   double peso;
 
 public:
-  Persona();
-  Persona(string, string, int, int, int, int, double, double);
-  void imc();
+  Persona();//constructor vacio
+  Persona(string, string, int, int, int, int, double, double); //constructor con parametros
+  double imc();
+  int getEdad();
+  string getInfoPersona();
   void edad(int, int, int);
+  ~Persona();//destructor
 };

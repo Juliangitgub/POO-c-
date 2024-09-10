@@ -20,6 +20,7 @@ void Persona::imc() {
 }
 void Persona::edad(int dia, int mes, int año) {
   int valor;
+  
   if ((this->dia >= dia) && (this->mes >= mes)) {
     valor = año - 1 - (this->año);
     cout << "su edad es: " << valor << endl;
